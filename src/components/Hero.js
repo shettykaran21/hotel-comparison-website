@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Hero = props => {
-  return <header className={props.hero}></header>;
+const Hero = ({ hero, children }) => {
+  return <header className={hero}>{children}</header>;
 };
 
 Hero.defaultProps = {
