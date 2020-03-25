@@ -9,26 +9,30 @@ import SingleRoom from './pages/SingleRoom';
 
 import Navbar from './components/Navbar';
 
+import { RoomProvider } from './context';
+
 function App() {
   return (
-    <Router>
-      <Navbar />
+    <RoomProvider>
+      <Router>
+        <Navbar />
 
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/rooms/">
-          <Rooms />
-        </Route>
-        <Route exact path="/rooms/:slug">
-          <SingleRoom />
-        </Route>
-        <Route>
-          <Error />
-        </Route>
-      </Switch>
-    </Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/rooms/">
+            <Rooms />
+          </Route>
+          <Route exact path="/rooms/:slug">
+            <SingleRoom />
+          </Route>
+          <Route>
+            <Error />
+          </Route>
+        </Switch>
+      </Router>
+    </RoomProvider>
   );
 }
 
