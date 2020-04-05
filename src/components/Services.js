@@ -1,45 +1,43 @@
 import React, { Component } from 'react';
-import Title from '../components/Title';
 import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from 'react-icons/fa';
-
-class Services extends Component {
+import Title from './Title';
+export default class Services extends Component {
   state = {
     services: [
       {
         icon: <FaCocktail />,
         title: 'Free Cocktails',
         info:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magni!'
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias molestias eius libero?',
       },
       {
         icon: <FaHiking />,
-        title: 'Hiking!',
+        title: 'Endless Hiking',
         info:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magni!'
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias molestias eius libero?',
       },
       {
         icon: <FaShuttleVan />,
-        title: 'Free Van',
+        title: 'Free Shuttle',
         info:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magni!'
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias molestias eius libero?',
       },
       {
         icon: <FaBeer />,
-        title: 'Cheap beer',
+        title: 'Strongest Beer',
         info:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magni!'
-      }
-    ]
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias molestias eius libero?',
+      },
+    ],
   };
-
   render() {
     return (
       <section className="services">
         <Title title="services" />
         <div className="services-center">
-          {this.state.services.map((item, index) => {
+          {this.state.services.map((item) => {
             return (
-              <article key={index} className="service">
+              <article key={`item-${item.title}`} className="service">
                 <span>{item.icon}</span>
                 <h6>{item.title}</h6>
                 <p>{item.info}</p>
@@ -51,5 +49,3 @@ class Services extends Component {
     );
   }
 }
-
-export default Services;

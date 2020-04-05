@@ -1,38 +1,26 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Home from './pages/Home';
-import Error from './pages/Error';
 import Rooms from './pages/Rooms';
 import SingleRoom from './pages/SingleRoom';
+import Error from './pages/Error';
 
 import Navbar from './components/Navbar';
 
-import { RoomProvider } from './context';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <RoomProvider>
-      <Router>
-        <Navbar />
-
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/rooms/">
-            <Rooms />
-          </Route>
-          <Route exact path="/rooms/:slug">
-            <SingleRoom />
-          </Route>
-          <Route>
-            <Error />
-          </Route>
-        </Switch>
-      </Router>
-    </RoomProvider>
+    <>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/rooms/" component={Rooms} />
+        <Route exact path="/rooms/:slug" component={SingleRoom} />
+        <Route component={Error} />
+      </Switch>
+    </>
   );
 }
 
