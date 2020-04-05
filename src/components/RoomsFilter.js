@@ -77,6 +77,7 @@ const RoomsFilter = ({ rooms }) => {
           <input
             type="range"
             name="price"
+            step="1000"
             min={minPrice}
             max={maxPrice}
             id="price"
@@ -110,24 +111,26 @@ const RoomsFilter = ({ rooms }) => {
 
         {/* ----Extras--- */}
         <div className="form-group">
-          <div className="single-extra">
-            <input
-              type="checkbox"
-              name="breakfast"
-              id="breakfast"
-              checked={breakfast}
-              onChange={handleChange}
-            />
-            <label htmlFor="breakfast">breakfast</label>
-          </div>
-          <div className="single-extra">
-            <input
-              type="checkbox"
-              name="pets"
-              checked={pets}
-              onChange={handleChange}
-            />
-            <label htmlFor="breakfast">pets</label>
+          <div className="single-extra-container">
+            <div className="single-extra">
+              <input
+                type="checkbox"
+                name="breakfast"
+                id="breakfast"
+                checked={breakfast}
+                onChange={handleChange}
+              />
+              <label htmlFor="breakfast">breakfast</label>
+            </div>
+            <div className="single-extra">
+              <input
+                type="checkbox"
+                name="pets"
+                checked={pets}
+                onChange={handleChange}
+              />
+              <label htmlFor="breakfast">pets</label>
+            </div>
           </div>
         </div>
       </form>

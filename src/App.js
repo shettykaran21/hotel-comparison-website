@@ -9,6 +9,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import { RoomProvider } from './context';
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/contact" component={Contact} />
           <Route component={Error} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </RoomProvider>
   );
