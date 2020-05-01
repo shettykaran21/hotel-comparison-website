@@ -3,7 +3,12 @@ import Title from '../components/Title';
 
 const Contact = () => {
   return (
-    <div className="contact-container">
+    <div
+      className="contact-container"
+      name="contact"
+      method="POST"
+      data-netlify="true"
+    >
       <Title title="contact us" />
       <form className="contact-form">
         <div className="form-group">

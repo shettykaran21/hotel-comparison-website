@@ -48,11 +48,13 @@ export default class RoomProvider extends Component {
     });
     return tempItems;
   }
+
   getRoom = (slug) => {
     let tempRooms = [...this.state.rooms];
     const room = tempRooms.find((room) => room.slug === slug);
     return room;
   };
+
   handleChange = (event) => {
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -66,6 +68,7 @@ export default class RoomProvider extends Component {
       this.filterRooms
     );
   };
+
   filterRooms = () => {
     let {
       rooms,
