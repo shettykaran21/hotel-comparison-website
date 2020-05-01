@@ -28,7 +28,8 @@ const Contact = () => {
           <textarea name="message" id="message"></textarea>
         </div>
         <div className="form-group">
-          <input type="button" value="Submit" className="btn-primary" />
+          {/* <input type="submit" value="Submit" className="btn-primary" /> */}
+          <input type="submit" value="Submit" className="btn-primary" />
         </div>
       </form>
     </div>
