@@ -3,14 +3,10 @@ import Title from '../components/Title';
 
 const Contact = () => {
   return (
-    <div
-      className="contact-container"
-      name="contact"
-      method="POST"
-      data-netlify="true"
-    >
+    <div className="contact-container">
       <Title title="contact us" />
-      <form className="contact-form">
+      <form className="contact-form" method="POST" name="contact">
+        <input type="hidden" name="form-name" value="contact" />
         <div className="form-group">
           <label htmlFor="name">Name</label>
           <input type="text" name="name" id="name" />
@@ -28,7 +24,6 @@ const Contact = () => {
           <textarea name="message" id="message"></textarea>
         </div>
         <div className="form-group">
-          {/* <input type="submit" value="Submit" className="btn-primary" /> */}
           <input type="submit" value="Submit" className="btn-primary" />
         </div>
       </form>
