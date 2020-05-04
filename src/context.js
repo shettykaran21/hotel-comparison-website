@@ -111,6 +111,7 @@ export default class RoomProvider extends Component {
       sortedRooms: tempRooms,
     });
   };
+
   render() {
     return (
       <RoomContext.Provider
