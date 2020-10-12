@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import { RoomProvider } from './context';
 
-function App() {
+const App = () => {
   return (
     <RoomProvider>
       <BrowserRouter>
@@ -31,6 +31,6 @@ function App() {
       </BrowserRouter>
     </RoomProvider>
   );
-}
+};
 
 export default App;
