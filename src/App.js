@@ -12,7 +12,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
-import { RoomProvider } from './context';
+import RoomProvider from './context';
 
 const App = () => {
   return (
